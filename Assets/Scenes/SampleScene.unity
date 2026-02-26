@@ -498,11 +498,11 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0.079392284, y: -0, z: -0, w: 0.99684346}
-  m_LocalPosition: {x: 0, y: 3.03, z: -10}
+  m_LocalPosition: {x: -0.03999996, y: 0.80999994, z: -3.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2145569518}
   m_LocalEulerAnglesHint: {x: 9.107, y: 0, z: 0}
 --- !u!114 &330585547
 MonoBehaviour:
@@ -987,6 +987,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 873728064}
   m_CullTransparentMesh: 1
+--- !u!1 &1211414098
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1211414099}
+  m_Layer: 0
+  m_Name: attackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1211414099
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211414098}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.48}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2145569518}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1641640806
 GameObject:
   m_ObjectHideFlags: 0
@@ -1391,7 +1422,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::playerController
   speed: 5
   jumpForce: 7
-  rotationSpeed: 10
+  mouseSensitivity: 0.25
+  attackPoint: {fileID: 1211414099}
+  attackRange: 2
   health: 100
   healthText: {fileID: 873728066}
 --- !u!65 &2145569515
@@ -1483,7 +1516,9 @@ Transform:
   m_LocalPosition: {x: 2.09, y: 1.19, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 330585546}
+  - {fileID: 1211414099}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &2145569519
@@ -1547,11 +1582,10 @@ MonoBehaviour:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 330585546}
   - {fileID: 410087041}
   - {fileID: 832575519}
   - {fileID: 2145569518}
   - {fileID: 496483099}
-  - {fileID: 2070741897}
   - {fileID: 6060678}
+  - {fileID: 2070741897}
   - {fileID: 60018458}
